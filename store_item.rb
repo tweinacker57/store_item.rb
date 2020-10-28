@@ -8,43 +8,33 @@
 # p "The #{car3[:make]} #{car3[:model]} is $#{car3[:price]}"
 
 class Car
+  attr_reader :make, :model, :price
+  
   def initialize(input_make, input_model, input_price)
     @make = input_make
     @model = input_model
     @price = input_price
   end
 
-  def input_make
-    @make
-  end
-
-  def input_model
-    @model
-  end
-
-  def input_price
-    @price
-  end
-
   def car_info
-    "The #{@make} #{@model} is $#{@price}"
+    p "The #{@make} #{@model} is $#{@price}"
   end
 end
 
 car1 = Car.new("Ford", "GT", 120000)
-p car1.car_info
-p car1.input_make
-p car1.input_model
-p car1.input_price
+car1.car_info
+p car1.make
+p car1.model
+p car1.price
 
 car2 = Car.new("Aston Martin", "Vanquish", 250000)
-p car2.car_info
-p car2.input_make
-p car2.input_model
-p car2.input_price
+car2.car_info
+p car2.make
+p car2.model
+p car2.price
 
 car3 = Car.new("Tesla", "Model S", 100000)
-p car3.car_info
-p car3.input_make
-p car3.input_model
-p car3.input_price
+car3.car_info
+p car3.make
+p car3.model
+p car3.price
