@@ -33,9 +33,18 @@ end
 
 car1 = Car.new("Ford", "GT", 120000)
 p car1.car_info
+p car1.input_make
+p car1.input_model
+p car1.input_price
 
 car2 = Car.new("Aston Martin", "Vanquish", 250000)
 p car2.car_info
+p car2.input_make
+p car2.input_model
+p car2.input_price
 
 car3 = Car.new("Tesla", "Model S", 100000)
 p car3.car_info
+p car3.input_make
+p car3.input_model
+p car3.input_price
