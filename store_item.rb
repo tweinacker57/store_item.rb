@@ -10,10 +10,10 @@
 class Car
   attr_reader :make, :model, :price
   
-  def initialize(input_make, input_model, input_price)
-    @make = input_make
-    @model = input_model
-    @price = input_price
+  def initialize(input_options)
+    @make = input_options[:input_make]
+    @model = input_options[:input_model]
+    @price = input_options[:input_price]
   end
 
   def car_info
@@ -21,19 +21,19 @@ class Car
   end
 end
 
-car1 = Car.new("Ford", "GT", 120000)
+car1 = Car.new({:input_make => "Ford", :input_model => "GT", :input_price => 120000})
 car1.car_info
 p car1.make
 p car1.model
 p car1.price
 
-car2 = Car.new("Aston Martin", "Vanquish", 250000)
+car2 = Car.new(:input_make => "Aston Martin", :input_model => "Vanquish", :input_price => 250000)
 car2.car_info
 p car2.make
 p car2.model
 p car2.price
 
-car3 = Car.new("Tesla", "Model S", 100000)
+car3 = Car.new(:input_make => "Tesla", :input_model => "Model S", :input_price => 100000)
 car3.car_info
 p car3.make
 p car3.model
